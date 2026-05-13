@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Parabéns Mainha</title>
+  <title>Jesus te ama e eu também  💖</title>
 
   <style>
     *{
@@ -13,22 +13,23 @@
     }
 
     body{
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #ffd6e7;
+      background: linear-gradient(180deg, #ffd6e7, #ffeef5);
       overflow: hidden;
       font-family: Arial, Helvetica, sans-serif;
       position: relative;
     }
 
-    /* Figurinhas decorativas */
+    /* Decorações */
     .decoracao{
       position: absolute;
-      font-size: 40px;
-      opacity: 0.7;
+      font-size: 42px;
+      opacity: 0.8;
       animation: flutuar 6s infinite ease-in-out;
+      z-index: 1;
     }
 
     @keyframes flutuar {
@@ -36,7 +37,7 @@
         transform: translateY(0px) rotate(0deg);
       }
       50%{
-        transform: translateY(-15px) rotate(5deg);
+        transform: translateY(-18px) rotate(8deg);
       }
       100%{
         transform: translateY(0px) rotate(0deg);
@@ -46,92 +47,92 @@
     .container{
       text-align: center;
       z-index: 2;
+      padding: 20px;
     }
 
     h1{
       color: #ff2e78;
       font-size: 3rem;
       margin-bottom: 25px;
-      text-shadow: 2px 2px 8px rgba(255,255,255,0.7);
+      text-shadow: 2px 2px 8px rgba(255,255,255,0.8);
     }
 
-    img{
-      width: 320px;
-      max-width: 85vw;
-      height: 420px;
+    .galeria{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .galeria img{
+      width: 100%;
+      height: 280px;
       object-fit: cover;
       border-radius: 20px;
       border: 6px solid white;
-      cursor: pointer;
       box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease;
+      transition: 0.3s ease;
     }
 
-    img:hover{
-      transform: scale(1.03);
+    .galeria img:hover{
+      transform: scale(1.05);
     }
 
     p{
-      margin-top: 15px;
+      margin-top: 20px;
       color: #d63384;
       font-weight: bold;
+      font-size: 1.2rem;
     }
 
-    /* Posições das decorações */
-    .d1{ top: 5%; left: 8%; }
-    .d2{ top: 15%; right: 10%; }
-    .d3{ bottom: 10%; left: 12%; }
-    .d4{ bottom: 15%; right: 8%; }
-    .d5{ top: 40%; left: 5%; }
-    .d6{ top: 50%; right: 5%; }
+    /* Muitas flores e corações */
+    .d1{ top: 3%; left: 5%; }
+    .d2{ top: 8%; right: 8%; }
+    .d3{ bottom: 8%; left: 10%; }
+    .d4{ bottom: 12%; right: 6%; }
+    .d5{ top: 40%; left: 3%; }
+    .d6{ top: 50%; right: 3%; }
+    .d7{ top: 20%; left: 20%; }
+    .d8{ top: 25%; right: 20%; }
+    .d9{ bottom: 25%; left: 20%; }
+    .d10{ bottom: 20%; right: 20%; }
+    .d11{ top: 60%; left: 15%; }
+    .d12{ top: 70%; right: 15%; }
 
   </style>
 </head>
 <body>
 
-  <!-- Figurinhas -->
+  <!-- Decorações -->
   <div class="decoracao d1">💖</div>
   <div class="decoracao d2">🌸</div>
   <div class="decoracao d3">💗</div>
   <div class="decoracao d4">🌺</div>
   <div class="decoracao d5">💞</div>
   <div class="decoracao d6">🌷</div>
+  <div class="decoracao d7">🌹</div>
+  <div class="decoracao d8">💘</div>
+  <div class="decoracao d9">🌼</div>
+  <div class="decoracao d10">💓</div>
+  <div class="decoracao d11">🌻</div>
+  <div class="decoracao d12">💕</div>
 
   <div class="container">
-    <h1>Parabéns Mainha 💕</h1>
 
-    <img 
-      id="foto" 
-      src="fotos/f1.jpg" 
-      alt="Foto da Mainha"
-    >
+    <h1>Jesus te ama 💖 <br> e eu também 🌸</h1>
 
-    <p>Clique na foto 💖</p>
+    <div class="galeria">
+      <img src="fotos/f1.jpg" alt="Foto 1">
+      <img src="fotos/f2.jpg" alt="Foto 2">
+      <img src="fotos/f3.jpg" alt="Foto 3">
+      <img src="fotos/f4.jpg" alt="Foto 4">
+      <img src="fotos/f5.jpg" alt="Foto 5">
+    </div>
+
+    <p>Com muito amor 💕</p>
+
   </div>
-
-  <script>
-    const fotos = [
-      "fotos/f1.jpg",
-      "fotos/f2.jpg",
-      "fotos/f3.jpg",
-      "fotos/f4.jpg",
-      "fotos/f5.jpg"
-    ];
-
-    let indice = 0;
-
-    const imagem = document.getElementById("foto");
-
-    imagem.addEventListener("click", () => {
-      indice++;
-
-      if(indice >= fotos.length){
-        indice = 0;
-      }
-
-      imagem.src = fotos[indice];
-    });
-  </script>
 
 </body>
 </html>
